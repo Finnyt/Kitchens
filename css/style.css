@@ -1,0 +1,1761 @@
+html, body{
+margin: 0;
+padding: 0;
+position: relative;
+overflow-x: hidden;
+zoom: 100%;
+}
+
+body{
+display: flex;
+        flex-direction: column;	
+font-size: 75%;
+quotes: '\201c' '\201d';
+
+
+    background-size: cover;   background-color: #fea510;
+}
+
+
+img{
+user-drag: none;
+user-select: none;
+-ms-user-select: none;
+-moz-user-select: none;
+}
+
+.fb-like{
+    display: none !important;
+}
+
+h1,h2,h3,h4,h5, p{
+	display: inline;
+}
+
+a, a:hover, a:visited, a:active{
+  color:inherit;
+  text-decoration: none;
+ }
+
+/* img{ 
+  max-width: 100%; 
+  height: auto;
+} */
+
+/* h4{
+	line-height: 1.2em;
+ 	font-variant: small-caps; 
+font-family: Open Sans;
+font-size: 1.3em;
+font-style: italic;
+} */
+
+hr{
+    border: 0; display: block;
+    border-bottom: 0.063em dashed #ccc;
+    background: #999;
+}
+
+.search-form {
+	position: fixed;
+	right: 1.250em;
+	bottom: 0.063em; z-index: 9;
+}
+
+.search-field {
+	background-color: transparent;
+	background-image: url(../images/search.png);
+	background-position: 0.313em center;
+	background-repeat: no-repeat;
+	background-size: 1.500em 1.500em;
+	border: none;
+	cursor: pointer;
+	height: 37px;
+	margin: 3px 0;
+	padding: 0 0 0 34px;
+	position: relative;
+	-webkit-transition: width 400ms ease, background 400ms ease;
+	transition:         width 400ms ease, background 400ms ease;
+	width: 0;
+}
+
+.search-field:focus {
+	background-color: #fff;
+	border: 2px solid white;
+	cursor: text;
+	outline: 0;
+	width: 230px;
+	border-radius: 15px;
+}
+
+.search-submit {
+  display: none;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+}
+
+
+
+
+
+
+header {
+          flex:1 1 auto;
+  height: 100vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+  overflow: hidden;
+  font-size: 100%;
+  position: relative;
+
+  background-image: url(../images/chateau-default7.jpg); 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;   
+
+}
+
+.mobeheader{
+display: none;
+
+}
+
+.arr_down{	
+	position: absolute;	
+left: 48.08%; bottom: 0.1%; 
+  margin: 0 auto; min-height: 35px;  
+  -webkit-animation: blinker 3s linear infinite;  
+          animation: blinker 3s linear infinite;	
+}
+
+
+
+@-webkit-keyframes blinker{  
+  50% { opacity: 0.0; }
+}
+
+@keyframes blinker{  
+  50% { opacity: 0.0; }
+}
+
+
+.fbicon {
+position: absolute;	
+top: 15px; left: 10px;	 
+/*  transform: scale(0.5, 0.5); */
+
+}
+
+
+.logo {
+
+position: absolute;	
+top: 14%; left: 0; right: 0; 
+  margin: auto; min-width: 415px;
+  
+
+}
+
+
+
+
+
+
+
+
+.bpen-drawer{
+  position:absolute;
+  top: 0px;
+  height: 100%;
+  width: 85px;
+  background: rgba(99, 88, 63, 0.9);  
+  transition: 0.5s ease; 
+}
+
+.bpen-drawer-left{
+  left:-85px;
+  border-right: 2px solid #ccc; 
+}
+
+.bpen-drawer-right{
+  right:-85px;
+  border-left: 2px solid #ccc; 
+}
+
+.bpen-drawer-left.expanded{
+  left: 0px;
+}
+
+.bpen-drawer-right.expanded{
+  right:0px;
+}
+
+.bpen-toggle-pad {
+  position: relative;
+ top: 15px; right: 120px;
+  width: 25px;
+  height:100%;
+/*    background-color: brown;  */
+  opacity: 1;
+  text-align:center;
+  cursor:pointer;
+   background: url(../images/icon-navicon.png) no-repeat center center;
+   background-size: 25px 25px;
+  -webkit-transition: 3s ease;
+  -moz-transition: 3s ease;
+  -o-transition: 3s ease;
+  -ms-transition: 3s ease;
+  transition: 0.5s ease; 
+
+}
+
+.bpen-toggle-pad-left{
+  right: -50px;
+  text-align: center;
+}
+
+.bpen-toggle-pad-right{
+  left : -50px;
+  text-align: center;
+}
+
+.bpen-toggle-pad-left.expanded{
+  right: 0px;
+
+}
+
+.bpen-toggle-pad-right.expanded{
+/*   top:-50px;  */
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 1s, opacity 0.2s linear;
+  
+}
+
+.bpen-drawer-header{
+  position:relative;
+  height: 30px;
+  width:100%;
+  top:0px;
+  left:0px;
+  background-color: #63583f;
+}
+
+
+.bpen-drawer-items{
+    list-style-type:  none;
+    padding-left: 0px;
+    width:100%;
+    margin-top:0px;
+}
+
+.bpen-drawer-items li{
+  padding: 35px 0px 35px 0px;
+  width:100%;
+  margin: -1px 0px 0px 0px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  cursor:pointer;
+  font-size:1.1em;
+}
+
+.bpen-drawer-items li a{
+  display:block;
+  text-decoration:none;
+/*   font-weight: bold; */
+  color : white;
+  padding-left:10px;
+  width:100%;
+  font-family: Kalam;
+	font-size: 15px;
+	font-weight: bolder;
+	font-variant: small-caps;
+	color: #fceece;
+}
+
+			nav {
+			  display: block;
+			}
+			
+			#menu-wrapper {height:60px; 
+			z-index: 9999; position: absolute; left: 0; bottom: 0 !important; width: 100vw;
+			 padding-top: 2px;
+			  padding-bottom: 2px;
+			  background-color: rgba(254, 165, 16, 0.9);
+			  /* the hidden link for RWD nav */
+			  /* the rest of the menu lvl 1 */
+			  /* current links */
+			}
+			#menu-wrapper .menu {
+			  margin: 0;
+			  padding-left: 0;
+			  list-style: none;
+			  text-align: center;
+			}
+			#menu-wrapper .menu > li {
+			  position: relative;
+			  padding: 0.7em  0;
+			  display: inline-block;
+			}
+			
+
+
+.logoflag{
+	max-height:30px;
+	position: relative;
+	top: 5px;
+}	
+	
+#featurespoint{
+position: absolute; top: 91.2vh; 
+
+}
+
+
+.herowrapper{
+		background-color: #fea510;
+}
+
+ 
+.wrapper1{
+	 max-width: 100%;
+	 margin: 0%;
+     display: -webkit-box;
+     display: -webkit-flex;
+     display: -ms-flexbox;
+     display: flex; 	
+	 overflow: hidden;
+	 border: 0px green solid;
+	 padding: 0;
+	          flex:1 1 auto;
+	          flex-flow: row wrap;
+	  background: white;	
+	 margin-top: 0.3%;  
+ }
+ 
+.wrapper2 {
+	 max-width: 100%;
+	 margin: 0%;
+     display: -webkit-box;
+     display: -webkit-flex;
+     display: -ms-flexbox;
+     display: flex; 	
+	 overflow: hidden;
+	// border: 1px red solid;
+	 padding: 0;
+	          flex:1 1 auto;
+	         flex-direction: row;
+	  background: white;	 
+ }
+ 
+ 
+ 
+.wrapper3{
+	 max-width: 100%;
+	 margin: 0%;
+     display: flex; 	
+	 overflow: hidden;
+/* 	 border: 2px red solid;
+ */	 padding: 0;
+	          flex:1 1 auto;
+	  	         flex-flow: row wrap;
+	  background: white;	
+/* 	padding-bottom: 5px;	  */
+/* 	border: 2px red solid;	 */
+ }
+ 
+	   
+/* .wrapper2{
+	align-items: baseline;
+}	   
+	 */   
+
+
+.features{
+	          flex: 1;
+	  display: flex;
+	  -webkit-box-orient: horizontal;
+	  -webkit-box-direction: normal;
+	  -webkit-flex-direction: row;
+	      -ms-flex-direction: row;
+	          flex-direction: row;		
+	  
+/* 	  width: 60%;  */
+	  min-width: 62.4%; max-width: 62.4%; 
+	  margin-right: 0; padding-right:0;
+	  position: relative; 
+
+
+  }
+
+
+  
+.tab1special{
+		position: absolute;  		
+		top: -2%; left: -55px;	z-index: 7;
+}
+ .sticker p{
+	display: inline;
+	position: absolute; z-index: 9;
+ 	top: -6%; left: 0.56%;
+/* 	text-align: center; */
+	font-family: Kalam;
+	font-size: 20px;
+	font-weight: bolder;
+	font-variant: small-caps;
+	color: #fceece;
+}  
+ 
+.eventkyf .sticker a{
+	display: inline;
+	position: absolute; z-index: 999;
+ 	top: -1.5%; left: 1.6%;
+/* 	text-align: center; */
+	font-family: Kalam;
+	font-size: 20px;
+	font-weight: bolder;
+	font-variant: small-caps;
+	color: #fceece;
+
+	
+	
+}
+ 
+
+img.tab1{
+		position: absolute; top: -2%; left: -55px;	
+	}
+
+
+
+ .recipe .sticker p{
+	top: -5%; left: 42%;	 
+ } 
+ 
+.utensil_promospace .sticker p{
+	top: -5%;  
+ } 
+ 
+ 
+ .tab2 ~ a{
+ 	display: inline;
+	position: absolute; z-index: 9;
+	top: 1.5%; left: 31%;
+	-webkit-transform: rotate(-90deg);transform: rotate(-90deg); -ms-transform: rotate(-90deg);
+
+
+/* 	text-align: center; */
+	font-family: Kalam;
+	font-size: 20px;
+	font-weight: bolder;
+	font-variant: small-caps;
+	color: #fceece; 
+ }	 
+ 
+ 
+  .tab3 ~ a{
+ 	display: inline;
+	position: absolute; z-index: 9;
+	top: 1.5%; left: 65%;
+	-webkit-transform: rotate(-90deg); transform: rotate(-90deg); -ms-transform: rotate(-90deg);
+/* 	text-align: center; */
+	font-family: Kalam;
+	font-size: 20px;
+	font-weight: bolder;
+	font-variant: small-caps;
+	color: #fceece;
+ }	 	 
+
+ 
+					 .main_image {
+						         flex: 1 0 auto;
+						min-width: 72.3%; max-width: 72.3%; margin-right: 0;
+						height: 400px;
+						float: left;
+						background: #333;
+						position: relative;
+						overflow: hidden;
+						color: #fff;
+						padding-bottom: 10px; padding-right: 0;
+/* 						border-top: 5px solid blue; */
+/* 						border-right: 5px solid red;
+ */					}
+ 
+					 .main_image img{ margin-right: 0;
+						 max-height: 475px; padding-right: 0;
+						 max-width: 610px; 
+					 }
+					 
+					 
+					.main_image h2 {
+						font-size: 2em;
+						font-weight: normal;
+						margin: 0 0 5px;	padding: 10px; padding-bottom: 0px;
+						line-height: 1.2em;
+						/* 	font-variant: small-caps; */
+						font-family: Open Sans;
+						font-style: italic;
+					}
+
+
+					.block small { 
+						padding: 0 0 5px 5px; 
+						background: url(images/icon_cal.gif) no-repeat 0 center; 
+						font-size: 1em; 
+					}
+					.main_image .block small {margin-left: 5px; }
+					.main_image .desc{
+						position: absolute;
+						bottom: 0;	left: 0;
+						width: 100%;
+						display: none;
+					}
+					.main_image .block{
+						width: 100%; 
+						background: #111;
+						border-top: 1px solid #000;
+						padding-bottom: 8px;	
+
+					}		
+
+					
+					 .image_thumb {
+						float: left; margin-right: 0; padding-right: 0;
+                                                margin-left: 0; padding-left: 0;
+						width: 223px; height: 40px;
+						background: #f0f0f0;
+/* 						border-right: 1px solid #fff; */
+						border-top: 1px solid #ccc;
+						        flex: 1;
+	
+					}
+
+					.image_thumb ul {
+						margin: 0; padding: 0;
+						list-style: none;
+/* 						border: 4px solid green;	
+ */												
+					}
+					.image_thumb ul li{
+						margin: 0; padding: 12px 10px;
+						background-color: #f0f0f0;
+						min-width: 213px;
+						height: 56.2px;
+						float: left;
+						border-bottom: 1px solid #ccc;
+						border-top: 1px solid #fff;
+						border-right: 1px solid #ccc;
+
+					}
+					.image_thumb ul li.hover {
+						background: #ddd;
+						cursor: pointer;
+					}
+					.image_thumb ul li.active {
+						background: #fff;
+						cursor: default;
+					}
+					.image_thumb ul li h2 {
+						font-size: 1.5em; 
+						margin: 5px 0; padding: 0;
+						line-height: 1.2em;
+						/* 	font-variant: small-caps; */
+						font-family: Open Sans;
+						font-style: italic;
+					}
+					.image_thumb ul li .block {
+						float: left; 
+						margin-left: 10px; 
+						padding: 0;
+						width: 180px; 
+						
+						
+					}
+					 
+ 
+.eventkyf{
+		position: relative; min-width: 35%;
+		        flex:1 1 auto; overflow: hidden;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: column;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		margin-left: 0px; padding-left: 0; 
+
+}  
+
+
+
+
+		
+.monthevent{
+	        flex: 1 1 auto; margin-left: 0px; padding-left: 0; 	
+height: 200px; 
+	-webkit-box-shadow: inset 15px 0 15px -15px #333; box-shadow: inset 15px 0 15px -15px #333;   
+
+}
+
+.otherevents{
+           flex: 1 1 auto; 
+  height: 190px;
+   display: flex; 
+ }  	
+
+.event2{
+            flex: 1 1 auto;	
+	-webkit-box-shadow: inset 15px 0 15px -15px #333; 
+}
+
+.event3 {
+	         flex: 1 1 auto;	
+} 
+
+
+ .news{
+	 position: relative;	
+	 max-height: 405px; overflow: hidden;
+	 min-width: 61.5%;
+	         flex: 1;
+	 padding: 0.5% 0.5% 0.5% 0.5%;
+	 
+	 text-align: justify; 
+	 text-justify: interword;
+
+
+column-count:3; column-gap: 2em; -ms-column-count:3; -ms-column-gap: 2em;
+-webkit-column-count:3; /* Safari and Chrome */
+-webkit-column-gap: 2em; 
+-webkit-column-rule: dotted 1px;
+   -moz-column-rule: dotted 1px;
+        column-rule: dotted 1px;
+	 -webkit-box-shadow: inset 0 15px 15px -15px rgba(0,0,0,0.8),inset -15px 0 15px -15px rgba(0,0,0,0.8);
+box-shadow: inset 0 15px 15px -15px rgba(0,0,0,0.8),inset -15px 0 15px -15px rgba(0,0,0,0.8);	 
+
+}
+  
+.news .tab2{
+		position: absolute;
+		top: -17%; left: 31.75%;
+}	
+
+section.news  img.tab3{
+		position: absolute;
+		top: -17%; left: 65.7%;
+}		
+	
+
+p.newspara{
+	font-family: Open Sans;
+	 font-size: 1.1em; line-height: 1.1em;
+} 
+
+h4.newshead{
+line-height: 1.2em;
+/* 	font-variant: small-caps; */
+font-family: Open Sans;
+font-size: 1.3em;
+font-style: italic;
+
+}
+
+
+.art1 .pic1{
+max-height: 5em;
+  float: left;
+margin: 0.5em 0.5em 0.5em 0; -webkit-shape-outside: circle(50%); shape-outside: circle(50%);
+
+}
+
+ .art2 .pic2{
+max-height: 5em;
+  float: left;
+margin: 0.5em 0.5em 0.5em 0; -webkit-shape-outside: circle(50%); shape-outside: circle(50%);
+
+}
+
+.art3 .pic3{
+max-height: 5em;
+  float: left;	
+margin: 0.5em 0.5em 0.5em 0; -webkit-shape-outside: circle(50%); shape-outside: circle(50%);
+  
+}
+  
+  
+.bookiewook{	position: relative;  min-width: 37%;
+ 	        flex: 1;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column; max-height: 405px; overflow: hidden;
+	display: flex; 
+ 	padding: 0.5% 0.5% 0.5% 0.5%; 
+	-webkit-box-shadow: inset 0 15px 15px -15px rgba(0,0,0,0.8); box-shadow: inset 0 15px 15px -15px rgba(0,0,0,0.8);
+ }	  
+  
+
+
+section.bookiewook img.tab1{
+		position: absolute; top: -2%; left: -55px; z-index: 9;
+	}
+ 
+ .bookiewook  > .bookreview > p > .firstcharacter{
+	float: left; color: #979693; font-size: 75px; line-height: 60px; 
+	padding-top: 4px; padding-right: 4px; padding-left: 0; padding-bottom: 0; 
+	font-family: Open Sans;
+}  
+ 
+p.bookpara {
+	font-family: Open Sans;
+/* 	 line-height: 1em; 
+	 color: #7e7d7d; */
+	 font-size: 1.1em;
+} 
+ 
+/* p.bookpara:before{
+	content: open-quote;	
+	font-size: 2em; z-index: -1;
+}  */
+
+.bookreview{
+
+	        flex: 1; 
+}
+
+.bookreview1{
+position: relative;
+}
+
+.bookreview2{
+position: relative;
+}
+
+ 
+.bookreview1 img{
+	display: block;
+  max-width:150px;
+  max-height:200px; float: left;
+  -webkit-shape-outside: url(../images/firstfood.png);
+          shape-outside: url(../images/firstfood.png);
+  border: 2px orange solid;
+  -webkit-shape-image-threshold: 0;
+          shape-image-threshold: 0;
+   -webkit-shape-margin: 70px;  shape-margin: 70px;
+ margin-right: 10px;
+ }
+ 
+ .bookreview2 img{
+		display: inline; 
+  max-width:150px;
+  max-height:200px; float: right;
+  -webkit-shape-outside: url(../images/firstfood.png);
+          shape-outside: url(../images/firstfood.png);
+  border: 2px orange solid;
+  -webkit-shape-image-threshold: 0;
+          shape-image-threshold: 0;
+   -webkit-shape-margin: 70px; shape-margin: 70px;
+ margin-left: 10px;
+ }
+
+.ex1cover{
+position: absolute; left: 10px; bottom: 9px;		
+ }
+ 
+
+ .ex2cover{
+position: absolute; right: 10px; bottom: 4px;		
+ }
+
+ 
+
+ 
+.recipe{
+	         flex: 1;
+	 display: flex; 
+	 -webkit-box-orient: vertical;
+	 -webkit-box-direction: normal;
+	 -webkit-flex-direction: column;
+	     -ms-flex-direction: column;
+	         flex-direction: column;
+	 position: relative;
+	 min-width: 61.5%;  
+	 min-height: 520px; max-height: 520px;
+
+	 padding: 0 0.4% 0.4% 0.5%;
+	 overflow: hidden;
+	margin: 0; 
+	-webkit-box-shadow: inset 0 10px 10px -10px rgba(0,0,0,0.8),inset 0 -10px 10px -10px rgba(0,0,0,0.8);
+box-shadow: inset 0 10px 10px -10px rgba(0,0,0,0.8),inset 0 -10px 10px -10px rgba(0,0,0,0.8);
+ }
+
+ 
+.recipe img.recipeblogtab{
+	 position: absolute;
+	 top: -2%; left:31.5% ;
+ }
+
+div .ingredprepandpic {
+	padding-bottom: 0px; 
+	margin-bottom: 0px; 
+	padding-top: 0; min-height: 300px;
+	 max-height: 300px;
+ }
+ 
+div.mainprep{
+	         flex: 1;
+	margin-top: 0; padding-top: 5px;  min-height: 220px; max-height: 220px;
+	padding-bottom: 0;
+	 text-align: left; 
+-webkit-column-count:3;  column-count:3;
+-webkit-column-gap: 2em;  column-gap: 2em;
+/* 	 border: 2px red solid; */
+vertical-align: baseline;	 
+} 
+  
+p.recipecontent{
+	font-family: Open Sans;
+/* 	 line-height: 1em; 
+	 color: #7e7d7d; */
+	 font-size: 0.9em;
+}
+
+p.prepcontent{
+	font-family: Open Sans;
+/* 	 line-height: 1em; 
+	 color: #7e7d7d; */
+	 font-size: 0.9em;
+}
+
+.ingredprepandpic > .intro{
+ 	display: block;
+	position: absolute; top: 3%; left: 35%;
+	 text-align: center;
+	   margin-left: auto;
+  margin-right: auto;
+	 max-width: 240px; min-height: 300px;
+	 max-height: 300px;
+   -webkit-column-break-inside: avoid;
+      page-break-inside: avoid;
+           break-inside: avoid;
+   padding-top: 12px; 
+ }
+ 
+
+ 
+ .recipe > .ingredprepandpic > .procedure{ 
+	 text-align: left; 
+-webkit-column-count:2; 
+-webkit-column-gap: 34em; 
+column-count:2; 
+column-gap: 34em; 
+max-height: 300px;
+margin-top: 0;
+	margin-bottom: 0; padding-bottom: 0; padding-top: 5px;
+/* 		 border: 2px blue solid;  */
+		 	 max-height: 280px;
+ }
+
+ 
+.intro  img{
+max-height: 140px; 
+margin-top: 35px; 	margin-bottom: 0; padding-bottom: 0; margin-top: 0; padding-top: 8px;
+
+
+ }
+
+h5.procedurehead {
+padding-top: 0;
+margin-top: 0;
+margin-bottom: 0;
+padding-bottom: 0;
+font-family: Open Sans;
+font-size: 0.9em;
+font-style: bold;
+}
+
+h5.mainprephead {
+padding-top: 0;
+margin-top: 0;
+margin-bottom: 0;
+padding-bottom: 0;
+font-family: Open Sans;
+font-size: 0.9em;
+font-style: bold;
+}
+p.recipepara{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	 font-size: 1.2em;
+	 padding-bottom: 0; margin-bottom: 0;
+} 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ .utensil_promospace{
+	        flex: 1; position: relative; overflow: hidden;
+       min-width: 37.5%; max-width: 37.5%; 
+	min-height: 525px; max-height: 525px;
+	 	 display: flex;
+	 -webkit-flex-direction: column;
+	     -ms-flex-direction: column;
+	         flex-direction: column;
+/* 	 border: 2px red solid;*/ 	
+
+	
+ }
+ 
+.utensil_promospace img.tab1{
+		position: absolute; top: -2%; left: -55px;	z-index: 9;
+	}
+		
+
+  
+ .utensil{
+	 width: 100%;
+	 min-height: 260px; max-height: 260px;
+	 display: flex;
+	         flex-direction: row; position: relative;
+ }
+ 
+		 .bookimage {
+			min-height: 260px; max-height: 260px;
+			max-width: 240px; 
+			-webkit-box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8), inset 15px 0 15px -15px #333; 
+                        box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8), inset 15px 0 15px -15px #333; 
+			 
+			 }
+			
+ 			.bookshadow{
+			position: absolute;	
+			width: 100%;
+			height: 100%;
+			-webkit-box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8), inset 15px 0 15px -15px #333; 
+                        box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8), inset 15px 0 15px -15px #333; 
+			top: 0;
+			left: 0;					
+			} 
+			
+		 .utensilreview{
+			         padding: 2%;
+			 text-align: center;  		font-family: Open Sans;
+/* 	 line-height: 1em; 
+	 color: #7e7d7d; */
+	 font-size: 1.1em; z-index: 10; 	
+		  }
+
+
+		  
+ .promospace{
+           flex: 1; min-height: 265px; min-width: 550px;
+background-image: url("/images/bulletin.jpg");
+           align-items: center;
+   -webkit-box-pack: center;
+   -webkit-justify-content: center;
+       -ms-flex-pack: center;
+           justify-content: center; 
+    	-webkit-box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8), inset 0 -10px 10px -10px rgba(0,0,0,0.8), inset 15px 0 15px -15px rgba(0,0,0,0.8); 
+box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8), inset 0 -10px 10px -10px rgba(0,0,0,0.8), inset 15px 0 15px -15px rgba(0,0,0,0.8); 
+ }
+ 
+
+ .carwrap {	                flex:1 1 auto; 
+				display: flex;
+				-webkit-flex-direction: row;
+				    -ms-flex-direction: row;
+				        flex-direction: row;
+				width: 100%;
+				margin-top: 0;
+				margin-bottom: 0.3%;
+				padding-bottom: 0; padding-top: 0;
+				overflow: hidden;
+				-webkit-box-align: start;
+				-webkit-align-items: flex-start;
+				    -ms-flex-align: start;
+				        align-items: flex-start;
+				position: relative;
+/* 				border: 2px red solid; */
+/* 					  background: white;	  */
+			}
+			
+			
+			.carwrap * {
+				color: gray;
+			}
+
+			.carwrap .carousel {
+				        flex: 1 1 auto;
+				width: 350px;
+				min-height: 250px;
+				margin: 0 1px 1px 0;
+			}
+			.carwrap .carousel img {
+				display: block;
+			}
+			.carwrap .carousel div {
+				background-color: #f0dfbc;
+				width: 200px;
+				height: 250px;
+				padding: 35px 50px 35px 10px;
+				text-align: center;	
+				
+			}
+			.carwrap .carousel div h3 {
+ 				font-family: Kalam;
+ 				font-size: 20px;
+				line-height: 1em;
+				height: 50px;
+ 				padding-bottom: 10px; margin-bottom: 10px;
+			}
+			
+			.carwrap .carousel div h4 {
+ 				font-family: Kalam;
+			}
+			
+			.carwrap .carousel div p{
+				font-family: Open Sans;
+				margin-top: 10px;
+				height: 350px;
+				margin: 0;
+				font-style: italic;
+			}
+
+	.wrapper5, .wrapper6, .wrapper7 {
+	     display: none;	
+	     
+	}	
+
+
+		
+ .rectab ~ a{ position: absolute; 
+  top: -1.4%; left: 42.5%;  color: #fceece; width: 190px; z-index: 100; 		 	
+  font-family: Kalam;
+	font-size: 20px;
+	font-weight: bolder;
+	font-variant: small-caps;
+ }
+ 
+.rectab{
+		position: absolute; top: -2.5%; left: 32%;	z-index: 99;
+	}	
+
+	
+		
+ .blogtab ~ a{ position: absolute; 
+  bottom: -1.7%; left: 45%;  color: #fceece; width: 190px; z-index: 100; 		 	
+  font-family: Kalam; max-height: 30px; min-width: 220px;
+	font-size: 20px;
+	font-weight: bolder;
+	font-variant: small-caps;
+ }
+ 
+.blogtab{
+		position: absolute; bottom: -2.5%; left: 41%;	z-index: 99;
+	}
+	
+	
+.wrapper4, .wrapper5, .wrapper6{
+background-color: #fea510;
+}		
+
+footer{
+ 	  flex: 1 1 auto;	
+          height: 80px;
+ 	  background-color: #63583f; 
+	  position: relative;
+}	
+
+.foot-nav{
+	position: absolute; 
+	padding:0; margin: 0;	
+	top: 29.5%;
+	padding-left: 10px;
+	
+}
+
+.foot-nav li{
+	display: inline;
+	font-family: Open Sans;
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #fceece;
+	padding-right: 13px;
+	text-decoration: none;
+}
+.foot-nav li a{
+		text-decoration: none; 	color: #fceece;
+}
+
+.footnote1{
+	position: absolute;
+	top: 40.5%; left: 10px;	
+	font-family: Open Sans;
+	font-size: 1em; 
+        color: #fceece;
+}
+
+.footnote2{
+	position: absolute;
+	top: 59%; left: 10px;	
+	font-family: Open Sans;
+	font-size: 0.8em;
+	color: #fea510;
+}
+
+ @media (min-width: 650px) and (max-width: 800px){
+
+			body { font-size:70%;}
+	 
+			.logo{
+				min-width: 450px;
+			}
+			
+			.fbicon {
+				min-width: 25px;
+				min-height: 25px;			
+			}
+						
+			.arr_down{	
+				min-width: 60px; 
+				min-height: 33px; left: 47%;	
+			}
+			
+			.bpen-toggle-pad{
+			max-width: 20px;  max-width: 20px; top: 15px; right: -55px;	
+			}	
+			
+			.bpen-drawer{
+				  position:absolute;
+				  top: 0px;
+				  height: 100%;
+				  width: 60px;
+				  background: rgba(99, 88, 63, 0.9);  
+				  -webkit-transition: 0.5s ease;  
+				  transition: 0.5s ease; 
+			}
+							
+	
+	
+/* 			.wrapper1{
+			flex-direction: column;
+			flex-flow: row wrap;
+			} */
+
+			.features{
+			min-width: 100%;	
+			}
+			
+
+                        .wrapper2{
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-webkit-flex-direction: column;
+			    -ms-flex-direction: column;
+			        flex-direction: column;
+		        }
+
+
+                       .bookreview1 img{
+                        max-height: 100px;       
+                        }  
+
+                       .bookreview2 img{
+                        max-height: 100px; float: left; position: relative; left: -8px;       
+                        }
+
+                        .ex1cover, .ex2cover{
+                        display: none;
+                        }
+
+                        .event2{
+                        display: none;                 
+                        }                      
+			.eventkyf{
+                        -webkit-box-orient: horizontal;
+                        -webkit-box-direction: normal;
+                        -webkit-flex-direction: row;
+                            -ms-flex-direction: row;
+                                flex-direction: row;       
+			min-width: 100%;	
+			max-height: 190px;
+			}  
+			
+
+                     .utensil_promospace{
+                      min-width: 100%; min-width: 100%; overflow: hidden; max-height: 520px;
+                      }        
+
+                       .utensil{
+                        max-height: 260px; overflow: hidden;  min-width: 100%;  font-size: 115%;
+                        }
+                           
+
+                       .promospace{
+                       background-repeat: repeat; min-width: 100%; max-height: 260px;
+                       background-position: center;
+                        }        
+					
+
+
+
+   		      .news{
+			min-width: 100%;	
+			
+			}  
+			
+			.bookiewook{
+			min-width: 100%;	
+			}  
+			
+			.recipe{
+			min-width: 100%;			
+			}  
+
+ .rectab ~ a{ position: absolute; 
+  top: -1.4%; left: 41%;  color: #fceece; width: 190px; z-index: 100; 		 	
+  font-family: Kalam;
+	font-size: 20px;
+	font-weight: bolder;
+	font-variant: small-caps;
+ }
+ 
+.rectab{
+		position: absolute; top: -2.5%; left: 29%;	z-index: 99;
+	}
+
+			.intro  img{
+                       max-height: 110px; 
+		         }	
+
+                  		 	
+			
+		.wrapper4, .wrapper6, .wrapper7 {display: none !important;}
+
+	   		.wrapper5 {
+				        flex:1;
+				display: flex;
+				-webkit-box-orient: horizontal;
+				-webkit-box-direction: normal;
+				-webkit-flex-direction: row;
+				    -ms-flex-direction: row;
+				        flex-direction: row;
+				width: 100%;
+				margin-top: 0;
+				margin-bottom: 0.3%;
+				padding-bottom: 0; padding-top: 0;
+				overflow: hidden;
+				-webkit-box-align: start;
+				-webkit-align-items: flex-start;
+				    -ms-flex-align: start;
+				        align-items: flex-start;
+				position: relative;
+		             }
+		
+			.wrapper5 .carousel {
+				-webkit-box-flex: 1;
+				-webkit-flex: 1;
+				    -ms-flex: 1;
+				        flex: 1;
+				width: 25%;
+				max-width: 350px;
+				margin: 0 1px 1px 0;
+			}
+ }
+
+ @media (min-width: 450px) and (max-width: 649px){
+
+                     .logo{
+				min-width: 450px;
+						
+			}
+			
+			.fbicon {
+				min-width: 25px;
+				min-height: 25px;			
+			}
+						
+			.arr_down{	
+				min-width: 60px;
+				min-height: 33px; left: 46.3%;		
+			}
+			
+			.bpen-toggle-pad{
+			max-width: 20px;  max-width: 20px; top: 15px; right: -55px;	
+			}	
+			
+			.bpen-drawer{
+				  position:absolute;
+				  top: 0px;
+				  height: 100%;
+				  width: 60px;
+				  background: rgba(99, 88, 63, 0.9);  
+				  -webkit-transition: 0.5s ease;  
+				  transition: 0.5s ease; 
+			}
+				
+
+
+	       			.features{
+			min-width: 100%;	
+			}
+			
+
+                        .wrapper2{
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-webkit-flex-direction: column;
+			    -ms-flex-direction: column;
+			        flex-direction: column;
+		        }
+
+
+                       .bookreview1 img{
+                        max-height: 100px;       
+                        }  
+
+                       .bookreview2 img{
+                        max-height: 100px; float: left; position: relative; left: -8px;       
+                        }
+
+                        .ex1cover, .ex2cover{
+                        display: none;
+                        }
+
+                        .event2{
+                        display: none;                 
+                        }                      
+			.eventkyf{
+                        -webkit-box-orient: horizontal;
+                        -webkit-box-direction: normal;
+                        -webkit-flex-direction: row;
+                            -ms-flex-direction: row;
+                                flex-direction: row;       
+			min-width: 100%;	
+			max-height: 190px;
+			}  
+			
+
+
+                     .utensil_promospace{
+                      min-width: 100%; min-width: 100%; overflow: hidden; max-height: 520px;
+                      }        
+
+                       .utensil{
+                        max-height: 260px; overflow: hidden;  min-width: 100%;  font-size: 115%;
+                        }
+                           
+
+                       .promospace{
+                       background-repeat: repeat; min-width: 100%; max-height: 260px;
+                       background-position: center;
+                        }          
+					
+
+
+
+   		      .news{
+			min-width: 100%;	
+			
+			}  
+			
+			.bookiewook{
+			min-width: 100%;	
+			}  
+			
+			.recipe{
+			min-width: 100%;			
+			}  
+
+  .rectab ~ a{ position: absolute; 
+  top: -1.4%; left: 44.5%;  color: #fceece; width: 190px; z-index: 100; 		 	
+  font-family: Kalam;
+	font-size: 20px;
+	font-weight: bolder;
+	font-variant: small-caps;
+ }
+ 
+.rectab{
+		position: absolute; top: -2.7%; left: 29%;	z-index: 99;
+	}
+
+
+
+			.intro  img{
+                       max-height: 110px; 
+		        }
+
+ .blogtab ~ a{ position: absolute; 
+  bottom: -1.7%; left: 45.5%;  color: #fceece; width: 190px; z-index: 100; 		 	
+  font-family: Kalam;
+	font-size: 20px;
+	font-weight: bolder;
+	font-variant: small-caps;
+ }
+ 
+.blogtab{
+		position: absolute; bottom: -3%; left: 34%;	z-index: 99;
+	}
+
+
+.wrapper4, .wrapper5, .wrapper7 {display: none !important;}
+
+	   		.wrapper6 {
+				-webkit-box-flex:1;
+				-webkit-flex:1;
+				    -ms-flex:1;
+				        flex:1;
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-orient: horizontal;
+				-webkit-box-direction: normal;
+				-webkit-flex-direction: row;
+				    -ms-flex-direction: row;
+				        flex-direction: row;
+				width: 100%;
+				margin-top: 0;
+				margin-bottom: 0.3%;
+				padding-bottom: 0; padding-top: 0;
+				overflow: hidden;
+				-webkit-box-align: start;
+				-webkit-align-items: flex-start;
+				    -ms-flex-align: start;
+				        align-items: flex-start;
+				position: relative;
+		         }
+		
+			.wrapper6 .carousel {
+				-webkit-box-flex: 1;
+				-webkit-flex: 1;
+				    -ms-flex: 1;
+				        flex: 1;
+				width: 25%;
+				max-width: 350px;
+				margin: 0 1px 1px 0;
+			 }
+
+}
+
+
+
+
+
+
+
+
+@media (min-width: 200px) and (max-width: 449px) {
+
+                     .logo{
+				max-height: 300px; max-width: 300px;	 				
+			}
+			
+			.fbicon {
+				min-height: 37px; max-height: 37px;			
+			}
+						
+			.arr_down{	
+				min-width: 60px;
+				min-height: 30px; left: 41.5%;	max-height: 30px;
+			}
+			
+#mainMenu{
+max-height: 100%;
+}
+
+
+			.bpen-toggle-pad{
+    	              margin-left: -25px;
+			}
+
+			
+			.bpen-drawer{
+                          height: 100%;
+				  width: 50px; min-width: 57px;             
+			}
+
+
+header{
+display: none;
+}
+
+
+	 
+
+	 .main_image{
+			width: 100vw; min-width: 100vw; max-width: 100vw; overflow: hidden; max-height: 350px; 
+                       
+			}
+
+	 .present img {
+			max-height: 350px; transform: translateX(-50px);
+                       
+			}
+
+
+
+         .main_image h2 {
+         font-size: 1.7em;
+         }
+
+         .image_thumb{
+                        display: none; 
+                     }
+			
+
+.tab1special ~ p{
+top: -7%;
+
+}         
+
+
+               .wrapper2{
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-webkit-flex-direction: column;
+			    -ms-flex-direction: column;
+			        flex-direction: column;
+		        }
+
+
+
+
+
+                       .bookreview1 img{
+                        max-height: 100px;       
+                        }  
+
+                       .bookreview2 img{
+                        max-height: 100px; float: left; position: relative; left: -8px;       
+                        }
+
+                        .ex1cover, .ex2cover{
+                        display: none;
+                        }
+
+                        .event2{
+                        display: none;                 
+                        }                      
+			.eventkyf{
+                        -webkit-box-orient: horizontal;
+                        -webkit-box-direction: normal;
+                        -webkit-flex-direction: row;
+                            -ms-flex-direction: row;
+                                flex-direction: row;       
+			min-width: 100%;	
+			max-height: 190px;
+			}  
+			
+
+.monthevent{
+
+}
+
+.event3{
+}
+
+                     .utensil_promospace{
+                      min-width: 100%; min-width: 100%; overflow: hidden;  max-height: 520px;
+                      }        
+
+                       .utensil{
+                        max-height: 260px; overflow: hidden;  min-width: 100%;  font-size: 115%;
+                        }
+                           
+
+                       .promospace{
+                       background-repeat: repeat; min-width: 100%; max-height: 260px;
+                       background-position: center;
+                        }        	
+
+
+
+   		      .news{
+			min-width: 100%; max-width: 100%; column-count:1; padding-bottom: 4px; padding-top: 10px;
+height: 320px; min-height: 320px;
+			
+			}  
+
+.tab6{display: block  !important;
+position: absolute !important; top: -3.5%  !important; right: -55px !important;	
+ transform: rotate(90deg) !important;
+
+}
+
+                   .newshead{
+                      font-size: 1em; text-align: center;
+                      }        
+
+ .art1 p, .art2 p, .art3 p{
+line-height: 1.2em; font-size: 1.1em !important;
+
+}
+              .art1, .art2, .art3{
+                      max-height: 8.3em !important; overflow: hidden; padding-right: 12px; margin-bottom: 4px;
+                      }		
+
+.tab2, .tab2 ~ a{ display: none;}
+
+img.tab3{ display: none;}	
+
+img.tab3 ~ a {left: 92% !important; top: 4.5% !important; right: 4px !important; display: inline;}
+
+
+			.bookiewook{
+			min-width: 100%; padding-bottom: 4px;	max-height: 220px; overflow: hidden;
+                        height: 220px; min-height: 220px;           
+			}  
+
+.bookreview1{
+padding-bottom: 10px; padding-top: 10px;
+
+}
+
+section.bookiewook img.tab1 ~ a{
+position: absolute !important; top: -9.1% !important;
+
+
+}
+ .bookreview2{
+display: none;
+}
+
+
+			
+			.recipe{
+			max-width: 100vw !important; overflow: hidden;	
+                        max-height: 100px !important; overflow: hidden;	
+margin-bottom: -90%;	
+			}  
+
+.rectab{
+transform: scaleX(0.75); left: 10% !important; top: -2.1% !important;
+}
+
+ .rectab ~ a{
+left: 34% !important; top: -1.1% !important;
+}
+.recbrief{
+bottom: -4px;
+
+}
+
+
+ .rectab ~ a{ position: absolute; 
+  top: -1.2%; left: 44.5%;  color: #fceece; width: 190px; z-index: 100; 		 	
+  font-family: Kalam;
+	font-size: 20px;
+	font-weight: bolder;
+	font-variant: small-caps;
+ }
+ 
+.rectab{
+		position: absolute; top: -1.3%; left: 24%;	z-index: 99;
+	}
+
+			.intro  img{
+                       max-height: 110px; 
+		        }
+
+
+.mainprep, .procedure, .recipecontent{
+display: none;
+} 
+
+.ingredprepandpic > .intro{
+display: flex;
+text-align: left; padding-left: 7px; padding-top: 5px;
+float: left; min-width: 29%;
+left: 0%;
+}
+
+.recipepara{
+flex: 1; min-width: 70%; max-width: 80%; font-size: 75%;
+}
+
+.recipeimage{
+flex: 1; position: absolute; top: 16px;
+shape-outside: url(<?php echo $reciperow[0]['recpicpath']; ?>); 
+padding-top: 10px;
+}
+
+.utensilreview ~ p{ 
+font-size: 1em;
+line-height: 1.1em;
+}
+
+.utensilreview{
+max-height: 15.4em !important; overflow: hidden;
+}
+
+ .blogtab ~ a{ position: absolute; 
+  bottom: -1.7%; left: 29.5%;  color: #fceece; width: 190px; z-index: 100; 		 	
+  font-family: Kalam;
+	font-size: 20px;
+	font-weight: bolder;
+	font-variant: small-caps;
+ }
+ 
+.blogtab{
+		transform: scaleX(0.75); position: absolute; bottom: -2.5%; left: 6%;	z-index: 99;
+	}
+
+
+.blogtab ~ a{
+bottom: -0.8%; left: 22% !important;
+
+}
+
+.wrapper1, .wraper2, .wrapper3{
+
+min-width: 100%, max-width: 100%;
+}
+
+
+.wrapper4, .wrapper5, .wrapper6 {display: none !important; }
+
+
+.wrapper7 {
+
+				        flex:1 1 auto;
+				display: flex;
+				        flex-direction: row;
+				width: 100%;
+				margin-top: 0;
+				margin-bottom: 0.3%;
+				padding-bottom: 0; padding-top: 0;
+				overflow: hidden;
+				        align-items: flex-start;
+				position: relative;
+		         }
+		
+			.wrapper7 .carousel {
+
+				  flex: 1 1 auto;
+				min-width: 50%; max-width: 50%;
+				margin: 0 1px 1px 0;
+			 }
+
+
+     
+       
+}
+
+
+ @media all and (orientation:portrait) {
+
+                     .logo{
+				max-width: 370px; left: -11%;					
+			}
+
+
+}
