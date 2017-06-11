@@ -1,0 +1,15 @@
+RewriteEngine on
+RewriteBase /experiment/PrefinalKoH/
+RewriteRule ^home/?$ /index.php [NC,L]
+RewriteRule ^news/?$ /news.php [NC,L]
+RewriteRule ^news/([0-9a-zA-Z]+)/?$ /news.php?id=$1 [NC,L,QSA]
+RewriteRule ^reviews/?$ /reviews.php [NC,L]
+RewriteRule ^reviews/([0-9a-zA-Z]+)/?$ /reviews.php?id=$1 [NC,L]
+RewriteRule ^recipes/?$ /recipes.php [NC,L]
+RewriteRule ^recipes/([0-9a-zA-Z]+)/?$ /recipes.php?id=$1 [NC,L]
+RewriteRule ^events/?$ /events.php [NC,L]
+RewriteRule ^events/([0-9a-zA-Z]+)/?$ /events.php?id=$1 [NC,L]
+RewriteRule ^foodiq/?$ /foodiq.php [NC,L]
+RewriteRule ^foodiq/([0-9a-zA-Z]+)/?$ /foodiq.php?id=$1 [NC,L]
+RewriteRule ^about/?$ /about.php [NC,L]
+RewriteRule ^contact/?$ /contact.php [NC,L]
